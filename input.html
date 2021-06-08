@@ -1,0 +1,39 @@
+<html>
+	<head>
+		<script>
+			function CopiarTexto(){
+				const valueRut = document.getElementById("textRut").value;
+				if(valueRut!="")
+					document.getElementById("rut").innerText = valueRut;
+                
+				const valueNombre = document.getElementById("textNombre").value;
+				if(valueNombre!="")
+					document.getElementById("nombre").innerText = valueNombre;
+
+				const valueCorreo = document.getElementById("textCorreo").value;
+				if(valueCorreo!="")
+					document.getElementById("correo").innerText = valueCorreo;
+			}
+		</script>
+	</head>
+	<body>
+		<h1>Formulario</h1>
+		<input type="text" id="textRut" onInput="CopiarTexto()" placeholder="RUT">
+		<br>
+		<input type="text" id="textNombre" onInput="CopiarTexto()" placeholder="Nombre">
+		<br>
+		<input type="text" id="textCorreo" onInput="CopiarTexto()" placeholder="Correo">
+		<br><br>
+		<table>
+			<tr>
+ 				<td>RUT:</td><td><span id="rut"></span></td>
+			</tr>
+			<tr>
+				<td>Nombre:</td><td><span id="nombre"></span></td>
+			</tr>
+			<tr>
+				<td>Correo:</td><td><span id="correo"></span></td>
+			</tr>
+		</table>
+	</body>
+</html>
